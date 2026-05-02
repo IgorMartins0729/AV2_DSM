@@ -1,5 +1,0 @@
-export enum NivelPermissao {
-  ADMINISTRADOR = "ADMINISTRADOR",
-  ENGENHEIRO = "ENGENHEIRO",
-  OPERADOR = "OPERADOR"
-}
