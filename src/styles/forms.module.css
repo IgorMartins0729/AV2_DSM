@@ -1,0 +1,146 @@
+.linkVoltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.linkVoltar:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 720px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #222;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #777;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.erro {
+  font-size: 0.8rem;
+  color: #c0392b;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  border-top: 1px solid #eee;
+  padding-top: 18px;
+}
+
+.botaoPrimario,
+.botaoSecundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.botaoPrimario {
+  background-color: #222;
+  color: #fff;
+}
+
+.botaoPrimario:hover {
+  background-color: #000;
+}
+
+.botaoSecundario {
+  background-color: #fff;
+  color: #444;
+  border-color: #d0d0d0;
+}
+
+.botaoSecundario:hover {
+  background-color: #f3f3f3;
+  color: #000;
+}
+
+.checkboxList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 12px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.checkboxItem input[type='checkbox'] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkboxVazio {
+  padding: 16px;
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+@media (max-width: 600px) {
+  .linha {
+    grid-template-columns: 1fr;
+  }
+}

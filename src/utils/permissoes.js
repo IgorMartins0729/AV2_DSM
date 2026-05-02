@@ -1,0 +1,55 @@
+export const NivelPermissao = {
+  OPERADOR: 'OPERADOR',
+  ENGENHEIRO: 'ENGENHEIRO',
+  ADMINISTRADOR: 'ADMINISTRADOR',
+}
+
+export const NIVEIS_DISPONIVEIS = [
+  NivelPermissao.OPERADOR,
+  NivelPermissao.ENGENHEIRO,
+  NivelPermissao.ADMINISTRADOR,
+]
+
+const HIERARQUIA = {
+  [NivelPermissao.OPERADOR]: 1,
+  [NivelPermissao.ENGENHEIRO]: 2,
+  [NivelPermissao.ADMINISTRADOR]: 3,
+}
+
+export const AcaoSistema = {
+  CADASTRAR_AERONAVE: 'CADASTRAR_AERONAVE',
+  CADASTRAR_PECA: 'CADASTRAR_PECA',
+  CADASTRAR_ETAPA: 'CADASTRAR_ETAPA',
+  ASSOCIAR_FUNCIONARIO_ETAPA: 'ASSOCIAR_FUNCIONARIO_ETAPA',
+  REGISTRAR_TESTE: 'REGISTRAR_TESTE',
+  GERAR_RELATORIO_FINAL: 'GERAR_RELATORIO_FINAL',
+  CADASTRAR_FUNCIONARIO: 'CADASTRAR_FUNCIONARIO',
+  LISTAR_FUNCIONARIOS: 'LISTAR_FUNCIONARIOS',
+  ATUALIZAR_STATUS_PECA: 'ATUALIZAR_STATUS_PECA',
+  INICIAR_ETAPA: 'INICIAR_ETAPA',
+  FINALIZAR_ETAPA: 'FINALIZAR_ETAPA',
+}
+
+const NIVEL_MINIMO_POR_ACAO = {
+  [AcaoSistema.CADASTRAR_AERONAVE]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.CADASTRAR_PECA]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.CADASTRAR_ETAPA]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.ASSOCIAR_FUNCIONARIO_ETAPA]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.REGISTRAR_TESTE]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.GERAR_RELATORIO_FINAL]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.CADASTRAR_FUNCIONARIO]: NivelPermissao.ADMINISTRADOR,
+  [AcaoSistema.LISTAR_FUNCIONARIOS]: NivelPermissao.ENGENHEIRO,
+  [AcaoSistema.ATUALIZAR_STATUS_PECA]: NivelPermissao.OPERADOR,
+  [AcaoSistema.INICIAR_ETAPA]: NivelPermissao.OPERADOR,
+  [AcaoSistema.FINALIZAR_ETAPA]: NivelPermissao.OPERADOR,
+}
+
+export function pode(papel, acao) {
+  const necessario = NIVEL_MINIMO_POR_ACAO[acao]
+  if (!necessario || !papel) return false
+  return HIERARQUIA[papel] >= HIERARQUIA[necessario]
+}
+
+export function nivelMinimo(acao) {
+  return NIVEL_MINIMO_POR_ACAO[acao] ?? null
+}

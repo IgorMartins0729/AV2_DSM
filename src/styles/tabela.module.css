@@ -1,0 +1,201 @@
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabela thead th {
+  text-align: left;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tabela tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.tabela tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.containerTabela {
+  overflow-x: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.botaoVer,
+.botaoRemover {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  background: transparent;
+}
+
+.botaoVer {
+  color: #2c7fb8;
+  border-color: #d0e3f0;
+}
+
+.botaoVer:hover {
+  background-color: #eef6fc;
+  color: #1a5d8c;
+}
+
+.botaoRemover {
+  color: #c0392b;
+  border-color: #f0d0cf;
+}
+
+.botaoRemover:hover {
+  background-color: #fcefef;
+  color: #962c20;
+}
+
+.vazio {
+  text-align: center;
+  padding: 48px 20px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #eef2f7;
+  color: #4a5b6e;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.statusSelect {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.statusSelect:focus {
+  outline: none;
+  border-color: #70C0E4;
+  box-shadow: 0 0 0 3px rgba(112, 192, 228, 0.18);
+}
+
+.botaoAcao {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: #70C0E4;
+  color: #fff;
+  transition: background-color 0.15s ease;
+}
+
+.botaoAcao:hover {
+  background-color: #5aaed4;
+}
+
+.statusComBotao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.linkEditar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #2c7fb8;
+  text-decoration: none;
+  border: 1px solid #d0e3f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.linkEditar:hover {
+  background-color: #eef6fc;
+  color: #1a5d8c;
+}
+
+.celulaContagem {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.botaoAcao:disabled,
+.botaoRemover:disabled,
+.botaoVer:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.botaoAcao:disabled:hover {
+  background-color: #70C0E4;
+}
+
+.botaoRemover:disabled:hover {
+  background-color: transparent;
+  color: #c0392b;
+}
+
+.statusSelect:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.linkEditarDesabilitado {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #999;
+  border: 1px solid #e5e5e5;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: not-allowed;
+}

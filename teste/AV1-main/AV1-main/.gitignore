@@ -1,0 +1,5 @@
+node_modules
+output
+storage/*
+!storage/funcionarios.json
+no_pix_allowed

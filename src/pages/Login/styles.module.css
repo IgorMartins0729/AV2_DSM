@@ -1,0 +1,138 @@
+.tela {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c7fb8;
+  margin: 0;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcone {
+  position: absolute;
+  left: 12px;
+  color: #999;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #222;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #70C0E4;
+  box-shadow: 0 0 0 3px rgba(112, 192, 228, 0.18);
+}
+
+.botao {
+  margin-top: 8px;
+  padding: 12px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #70C0E4;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.botao:hover {
+  background-color: #5aaed4;
+}
+
+.linkRodape {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0;
+}
+
+.linkRodape a {
+  color: #2c7fb8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.linkRodape a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 22px;
+  }
+
+  .titulo {
+    font-size: 1.3rem;
+  }
+}

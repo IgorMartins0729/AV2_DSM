@@ -1,0 +1,269 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  min-height: 100vh;
+  padding: 16px;
+  background-color: #ffffff;
+  border-right: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  transition: width 0.25s ease, padding 0.25s ease, transform 0.25s ease;
+}
+
+.collapsed {
+  width: 72px;
+  padding: 16px 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #333;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.hamburger:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #444;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navItem:hover {
+  background-color: #f3f3f3;
+  color: #000;
+}
+
+.active {
+  background-color: #e8e8e8;
+  color: #000;
+  font-weight: 500;
+}
+
+.collapsed .navItem {
+  justify-content: center;
+  padding: 10px;
+}
+
+.navParent {
+  background: transparent;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.chevron {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  color: #888;
+}
+
+.activeParent {
+  color: #000;
+  font-weight: 500;
+}
+
+.subNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 4px 0 8px 16px;
+  padding-left: 10px;
+  border-left: 1px solid #e8e8e8;
+}
+
+.subItem {
+  font-size: 0.88rem;
+  padding: 8px 10px;
+  color: #555;
+}
+
+.sessao {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sessaoLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #777;
+  font-weight: 500;
+}
+
+.sessaoSelect {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  font-size: 0.85rem;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.sessaoSelect:focus {
+  outline: none;
+  border-color: #70C0E4;
+  box-shadow: 0 0 0 3px rgba(112, 192, 228, 0.18);
+}
+
+.sessaoColapsada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  padding: 8px 0;
+}
+
+.sessaoLinha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sessaoLinha .sessaoSelect {
+  flex: 1;
+  min-width: 0;
+}
+
+.botaoSair {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  color: #555;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.botaoSair:hover {
+  background-color: #fcefef;
+  color: #c0392b;
+  border-color: #f0d0cf;
+}
+
+.collapsed .botaoSair {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 0;
+}
+
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  z-index: 200;
+  transform: translateX(-100%);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.12);
+}
+
+.mobileAberto {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 150;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hamburguerFlutuante {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.15s ease;
+}
+
+.hamburguerFlutuante:hover {
+  background-color: #f3f3f3;
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "nome": "Administrador Padrao",
+    "telefone": "00000000000",
+    "endereco": "Nao informado",
+    "usuario": "admin",
+    "senha": "aerocode123",
+    "nivelPermissao": "ADMINISTRADOR"
+  }
+]
